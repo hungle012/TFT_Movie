@@ -2,7 +2,6 @@
   "name": "movie_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hungle012.github.io/TFT_Movie/",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.6.0",
@@ -44,9 +43,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
