@@ -1,0 +1,296 @@
+.profile {
+    background-image: url(../pages/bgfull.jpg);
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+
+    .profile__header {
+        width: 100%;
+        height: 80px;
+        background-color: #101010;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .header--nav {
+            height: 100%;
+            padding: 5px 5%;
+            color: $color-white;
+
+            .navbar {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .header--logo {
+                    img {
+                        width: 75px;
+                    }
+                }
+                .header--tiltle {
+                    p {
+                        color: $color-white;
+                        margin-bottom: 0;
+                        font-size: $fs-3;
+                    }
+                }
+                .header--back {
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    .profile__content {
+        height: 100vh;
+
+        .profile--user {
+            position: fixed;
+            height: 100vh;
+            top: 0;
+            padding-top: 100px;
+            border-right: 1px solid $color-gray-1;
+            z-index: 100;
+            transition: all 0.5s;
+
+            .openMenu {
+                position: fixed;
+                top: 87px;
+                right: -55px;
+                color: #fff;
+                font-size: 25px;
+                background-color: $color-orange-dark;
+                padding: 5px 10px;
+                border-radius: 10px;
+                display: none;
+            }
+
+            .user--avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                overflow: hidden;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .user--info {
+                border-bottom: 1px solid $color-gray-1;
+                color: $color-orange;
+
+                h5 {
+                    color: $color-white;
+                }
+
+                p {
+                    padding-left: 10px;
+                    font-size: 20px;
+                    margin-bottom: 0;
+                    color: $color-orange;
+
+                    @include between-sizes('673px','730px') {
+                        font-size: 18px;
+                    }
+                    @include between-sizes('577px','672px') {
+                        font-size: 16px;
+                        padding-left: 5px;
+                    }
+                }
+            }
+            .user--nav {
+                .nav-link {
+                    color: $color-white !important;
+
+                    &.active {
+                        background-color: $color-orange;
+                    }
+                }
+            }
+        }
+        .profile--info {
+            padding-top: 100px;
+            height: 100vh;
+            color: $color-white;
+            text-align: center;
+
+            .info--blur {
+                position: relative;
+                width: 95%;
+                height: 97%;
+                margin: auto;
+                padding: 20px;
+                border-radius: 20px;
+                background-color: rgba(255, 255, 255, 0.2);
+                backdrop-filter: blur(5px);
+
+                h4 {
+                    color: $color-orange;
+                    text-align: center;
+                }
+
+                .content--information {
+                    .field--item {
+                        margin: 20px 40px;
+                    }
+                    .MuiOutlinedInput-root,
+                    .MuiCheckbox-root {
+                        color: $color-white;
+                    }
+
+                    .btnPass {
+                        color: $color-white;
+                        border: 2px solid $color-blue-dark;
+                        padding: 5px 10px;
+                        border-radius: 10px;
+                        transition: all 0.3s;
+
+                        &:hover {
+                            background-color: $color-blue-light;
+                        }
+                    }
+                    .changePass {
+                        transition: all 0.3s;
+                    }
+                }
+
+                .content--history {
+                    height: 100%;
+                    .history--table {
+                        overflow-y: auto;
+                        height: 90%;
+                        position: relative;
+
+                        &::-webkit-scrollbar {
+                            width: 5px;
+                        }
+
+                        /* Track */
+                        &::-webkit-scrollbar-track {
+                            background: $color-white;
+                            border-radius: 5px;
+                        }
+
+                        /* Handle */
+                        &::-webkit-scrollbar-thumb {
+                            background: $color-gray-2;
+                            border-radius: 5px;
+                        }
+
+                        /* Handle on hover */
+                        &::-webkit-scrollbar-thumb:hover {
+                            background: $color-gray-1;
+                        }
+
+                        .table {
+                            color: $color-white;
+                            thead {
+                                position: sticky;
+                                top: 0;
+                                z-index: 10;
+                                background-color: $color-orange;
+
+                                th {
+                                    border: none !important;
+                                }
+                                th:nth-child(1) {
+                                    width: 30%;
+                                }
+                                th:nth-child(2) {
+                                    width: 15%;
+                                }
+                                th:nth-child(3) {
+                                    width: 25%;
+                                }
+                                th:nth-child(4) {
+                                    width: 20%;
+                                }
+                                th:nth-child(5) {
+                                    width: 10%;
+                                }
+                            }
+                            tbody {
+                                width: 100%;
+                                tr {
+                                    td {
+                                        button {
+                                            width: 40px;
+                                            padding: 5px;
+                                            background-color: goldenrod;
+                                            border-radius: 5px;
+                                            margin: 3px;
+                                        }
+                                    }
+                                    td:nth-child(1) {
+                                        width: 30%;
+                                        overflow-wrap: anywhere;
+                                    }
+                                    td:nth-child(2) {
+                                        width: 15%;
+                                    }
+                                    td:nth-child(3) {
+                                        width: 25%;
+                                    }
+                                    td:nth-child(4) {
+                                        width: 20%;
+                                        overflow-wrap: anywhere;
+                                    }
+                                    td:nth-child(5) {
+                                        width: 10%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// responsive
+@include reponsiveMax("small") {
+    .profile {
+        .profile__header {
+            .header--nav {
+                padding: 0;
+                .navbar {
+                    .header--logo img {
+                        width: 65px;
+                    }
+                }
+            }
+        }
+        .profile__content {
+            height: auto;
+            .profile--user {
+                position: absolute;
+                backdrop-filter: blur(5px);
+                background-color: #101010;
+                height: 100%;
+
+                .openMenu {
+                    display: block;
+                }
+            }
+            .profile--info {
+                height: auto;
+                padding: 87px 0 0;
+
+                .info--blur {
+                    height: 99%;
+
+                    .content--information {
+                        .field--item {
+                            margin: 20px 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

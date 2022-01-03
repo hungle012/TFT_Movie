@@ -1,0 +1,75 @@
+.login {
+    background-image: url(../pages/bgfull.jpg);
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    height: 100vh;
+    position: relative;
+    .login__content {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        width: 450px;
+        padding: 20px 0;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        background-image: linear-gradient(180deg, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+        color: $color-white;
+        font-size: $fs-2;
+
+        .login__close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            padding: 0;
+            background-color: $color-white;
+        }
+
+        .login__logo {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+            text-align: center;
+        }
+
+        .login__form {
+            .login__field {
+                height: 90px;
+            }
+        }
+        .login__button {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .button--register {
+                width: 80%;
+
+                Button {
+                    width: 100%;
+                }
+            }
+            Button {
+                background: linear-gradient(45deg,$color-blue-dark 30%, $color-blue-light 90%);
+                width: 80%;
+                margin: 8px 0;
+                padding: $pd-2;
+            }
+        }
+        .css-binzgt {
+            margin-top: 0;
+        }
+        .MuiOutlinedInput-root, .MuiCheckbox-root {
+            color: $color-white;
+        }
+    }
+}
+@include reponsiveMax("small"){
+    .login{
+        .login__content{
+            width: 85% !important;
+            font-size: $fs-1;
+        }
+    }
+    
+}

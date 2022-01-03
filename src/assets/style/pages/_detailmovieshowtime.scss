@@ -1,0 +1,219 @@
+.detailMovie_ShowTimes {
+  background-color: rgb(10, 32, 41);
+  position: relative;
+  width: 100%;
+  height: 600px;
+  .nav {
+    border: none;
+    .nav-item {
+      padding: 0px 10px;
+      &:hover {
+        font-size: 17px;
+      }
+      .nav-link.active {
+        border: 1px solid $color-orange-light;
+        background-color: transparent;
+        border-radius: 5px;
+        color: $color-orange-light;
+      }
+      .nav-link {
+        color: $color-orange-dark;
+        font-weight: bold;
+        border: none;
+      }
+    }
+  }
+  .detailShowtime__content {
+    color: $color-white;
+    width: 90%;
+    margin: 0 auto;
+    .theater__rap {
+      width: 100%;
+      display: flex;
+      margin: 10px 0;
+      .rap--info {
+        width: 90%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        opacity: 0.6;
+        transition: all 0.5s;
+
+        .rap--name {
+          font-weight: bold;
+        }
+      }
+    }
+    .theater__LichChieu {
+      padding: 0 10px 24px;
+
+      .row {
+        border-bottom: $color-gray-1 1px solid;
+        padding-bottom: 7px;
+      }
+
+      .movie--info {
+        color: $color-gray-2;
+        display: flex;
+        flex-wrap: wrap;
+        .movie--infoName {
+          font-size: 17px;
+          margin-bottom: 0;
+          font-weight: bold;
+          color: $color-black;
+        }
+        .theater__time {
+          display: flex;
+          .btn {
+            font-size: $fs-2;
+            border: $color-orange-dark 1px solid;
+            margin: 7px 7px;
+            color: $color-gray-2;
+            box-shadow: $color-orange-dark 0px 2px 5px -1px, $color-orange-dark 0px 1px 3px -1px;
+            background-color: rgba(246, 246, 246, 1);
+
+            .hightlight {
+              color: $color-green;
+              font-size: 120%;
+              transition: all 0.3s ease-in;
+            }
+
+            &:hover {
+              .hightlight {
+                color: $color-orange-dark;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        &:hover {
+          color: $color-black;
+          .rap--info {
+            opacity: 1;
+          }
+        }
+        &.ant-tabs-tab-active .ant-tabs-tab-btn {
+          color: $color-black;
+          .rap--info {
+            opacity: 1;
+          }
+        }
+      }
+      .ant-tabs-ink-bar {
+        background: red !important;
+        width: 3px;
+      }
+    }
+    .ant-tabs-content-holder {
+      height: 480px;
+      overflow-x: hidden;
+      .ant-tabs-content-left {
+        /* width */
+        ::-webkit-scrollbar {
+          width: 7px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: $color-start;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background: $color-gray-2;
+          border-radius: 7px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+          background: $color-gray-1;
+        }
+      }
+    }
+
+    .content__Infomation {
+      .description {
+        line-height: 25px;
+      }
+    }
+    .content__Vote {
+      width: 60%;
+      margin: 0px auto;
+      .myVote {
+        background-color: white;
+        color: black;
+        padding: 5px 0px 5px 10px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        &:hover {
+          cursor: pointer;
+        }
+        .avatar {
+          padding: 15px;
+          background-color: rgba(128, 128, 128, 0.2);
+          color: $color-orange-dark;
+          border-radius: 50%;
+        }
+        p {
+          margin: 10px;
+          i {
+            color: $color-orange-light;
+          }
+        }
+        .star {
+          color: $color-orange-light;
+        }
+        .score {
+          color: #00ac4d;
+          font-weight: bold;
+        }
+        .user {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// resposive
+@include reponsiveMax("small") {
+  .detailMovie_ShowTimes {
+    .container {
+      padding: 0;
+      .nav {
+        .nav-item {
+          padding: 0 5px;
+        }
+      }
+      .detailShowtime__content {
+        width: 100%;
+        .ant-tabs-tab {
+          padding: 10px !important;
+        }
+        .ant-tabs-tabpane {
+          padding-left: 15px !important;
+        }
+        .theater__rap {
+          img {
+            display: none;
+          }
+          .rap--info {
+            opacity: 1;
+          }
+        }
+        .theater__LichChieu {
+          padding-bottom: 0 !important;
+          .theater__time {
+            width: 50%;
+          }
+        }
+        .content__Infomation {
+          padding: 0 10px;
+        }
+      }
+    }
+  }
+}

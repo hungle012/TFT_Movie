@@ -1,0 +1,103 @@
+.carousel {
+    .carousel-indicators {
+        align-items: center;
+        li {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            margin-left: 20px;
+        }
+        .active {
+            width: 10px;
+            height: 10px;
+            background-color: orange;
+        }
+    }
+
+    .home_carousel {
+        // box-shadow: rgba(0, 0, 0, 0.45) 0px 30px 20px -10px;
+        img {
+            opacity: 0;
+        }
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 10rem;
+            bottom: -1px;
+            left: 0;
+            z-index: 1;
+            background-image: linear-gradient(180deg, transparent, #000 93%);
+        }
+
+        .carousel-item {
+            .playTrailer {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1);
+                color: white !important;
+                border-radius: 50%;
+                opacity: 0;
+                transition: all 0.5s;
+                cursor: pointer !important;
+
+                i {
+                    padding: 25px;
+                    border: 2px solid white;
+                    border-radius: 50%;
+                    color: white;
+                    cursor: pointer !important;
+                    transition: all 0.5s;
+                    font-size: 25px;
+                    background-color: rgba(0, 0, 0, 0.5);
+                }
+
+                &:hover {
+                    i {
+                        transform: scale(1.2);
+                        color: orange;
+                        border-color: orange;
+                    }
+                }
+            }
+
+            &:hover {
+                .playTrailer {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .btn-control {
+        &:hover {
+            i {
+                color: orange !important;
+            }
+        }
+    }
+}
+@include reponsiveMax("small") {
+    .carousel {
+        display: none;
+    }
+}
+@include reponsiveMax("headerExMax") {
+    .carousel {
+        .home_carousel {
+            .carousel-item {
+                height: 576px !important;
+            }
+        }
+    }
+}
+@include reponsiveMax("medium") {
+    .carousel {
+        .home_carousel {
+            .carousel-item {
+                height: 430px !important;
+            }
+        }
+    }
+}

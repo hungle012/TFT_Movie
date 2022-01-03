@@ -1,0 +1,33 @@
+// Helper
+@import './Helper/variable';
+@import './Helper/mixin';
+
+// Vendor
+
+// Base
+@import './Base/reset';
+// Components
+@import './Components/button';
+
+// Layouts 
+@import './Layouts/header';
+@import './Layouts/homecarousel';
+@import './Layouts/listmovie';
+@import './Layouts/footer';
+@import './Layouts/appmovie';
+@import './Layouts/news';
+@import './Layouts/login';
+@import './Layouts/register';
+@import './Layouts/checkout';
+@import './Layouts/showtime';
+@import './Layouts/profile';
+@import './Layouts/loading';
+@import './Layouts/checkoutMobile';
+
+// Pages
+@import './pages/detailmovie';
+@import './pages/detailmovieshowtime';
+@import './pages/home';
+@import './pages/admin';
+@import './pages/searchBar';
+// Theme

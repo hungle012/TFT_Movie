@@ -1,0 +1,128 @@
+.register {
+    background-image: url(../pages/bgfull.jpg);
+    background-position: center;
+    background-size: 100%;
+    object-fit: cover;
+    height: 100vh;
+    position: relative;
+    .register__content {
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        max-width: 50%;
+        padding: 20px 0;
+        transform: translate(-50%, -50%);
+        align-items: center;
+        background-image: linear-gradient(180deg, rgba(20, 50, 93, 0.9), rgba(8, 22, 48, 0.9));
+        color: $color-white;
+        font-size: $fs-2;
+
+        .register__close {
+            position: absolute;
+            top: -15px;
+            right: -15px;
+            padding: 0;
+            background-color: $color-white;
+        }
+
+        .register__logo {
+            img {
+                width: 80px;
+                height: 80px;
+            }
+            text-align: center;
+        }
+
+        .register__form {
+            width: 100%;
+            .register__field {
+                .field--col {
+                    padding: 0 20px 10px;
+
+                    .field--row {
+                        height: 90px;
+                    }
+                }
+            }
+        }
+        .register__button {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .button--login {
+                width: 40%;
+
+                Button {
+                    width: 100%;
+                }
+            }
+
+            Button {
+                background: linear-gradient(45deg, $color-blue-dark 30%, $color-blue-light 90%);
+                width: 40%;
+                margin: 8px 0;
+                padding: $pd-2;
+            }
+        }
+        .css-binzgt {
+            margin-top: 0;
+        }
+        .MuiOutlinedInput-root {
+            color: $color-white;
+        }
+    }
+}
+.MuiModal-root {
+    .MuiList-root {
+        color: $color-white;
+        background-color: $color-blue-dark;
+    }
+}
+// màn hình ipX,6,7,8 plus
+@include reponsiveMax("small") {
+    .register {
+        .register__content {
+            max-width: 85%;
+            padding: 0;
+            font-size: $fs-1;
+            .register__close {
+                position: absolute;
+                top: -9px;
+                right: -9px;
+            }
+            .register__form {
+                .register__field {
+                    .field--col {
+                        padding: 0 5px 0;
+                        .field--row {
+                            height: 77px;
+                        }
+                    }
+                }
+            }
+            .register__button {
+                .button--login {
+                    width: 50%;
+                }
+            }
+
+        }
+    }
+}
+
+@include reponsiveMax("headerExMax") {
+    .register {
+        .register__content {
+            max-width: 60%;
+        }
+    }
+}
+@include reponsiveMax("mid") {
+    .register {
+        .register__content {
+            max-width: 70%;
+        }
+    }
+}

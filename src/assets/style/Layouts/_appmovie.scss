@@ -1,0 +1,57 @@
+.footer__introduce {
+    padding: $pd-6 0px;
+
+    .intro__info {
+        color: $color-white;
+        h2 {
+            color: white !important;
+        }
+        button {
+            outline: none;
+        }
+        span {
+            a {
+                text-decoration: none;
+                color: $color-orange-dark;
+            }
+        }
+    }
+    .intro__img {
+        text-align: center; 
+        @include reponsiveMax("medium"){
+            height: 50%;
+        }
+
+        .img__mobile {
+            position: relative;
+            width: 44.2%;
+            height: auto;
+            overflow: hidden;
+            @include reponsiveMax("medium"){
+                height: 50%;
+            }
+        }
+
+        .img__app {
+            position: absolute;
+            top: 1%;
+            left: 30%;
+            bottom: -20%;
+            height: 97.5%;
+            width: 40%;
+            text-align: center;
+            border-radius: 25px;
+            overflow: hidden;
+
+            @include reponsiveMax("medium") {
+                width: 38.9%;
+                left: 30.7%;
+            }
+
+            img {
+                // border-radius: 25px;
+                height: auto;
+            }
+        }
+    }
+}

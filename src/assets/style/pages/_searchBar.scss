@@ -1,0 +1,115 @@
+.searchInputs {
+    margin-top: 50px;
+    display: flex;
+    position: relative;
+}
+.search input {
+    border: 0;
+    font-size: 16px;
+    padding: 15px;
+    height: 25px;
+    color: white;
+}
+.searchIcon {
+    height: 55px;
+    padding: 10px 0px 10px;
+    width: 80px;
+    position: absolute;
+    right: 5px;
+    color: #fbbd61;
+    display: flex;
+    align-items: flex-end;
+    .voice {
+        border-right: 1px solid;
+        padding: 0 3px;
+        cursor: pointer;
+    }
+    .icon__search {
+        padding: 0 3px;
+    }
+}
+
+input:focus {
+    outline: none;
+}
+.searchIcon svg {
+    font-size: 35px;
+}
+.dataResult {
+    margin-top: 5px;
+    max-height: 350px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    position: absolute;
+    z-index: 10;
+    width: 73%;
+
+}
+.dataResult::-webkit-scrollbar {
+    display: none;
+}
+.dataResult .dataItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    color: black;
+    padding: 10px 20px;
+}
+.dataResult a:hover {
+    background-color: lightgrey;
+    color: #000 !important;
+}
+
+.dataItem a {
+    margin-left: 10px;
+}
+.dataItem .hinhAnh img {
+    width: 85px;
+    height: 95px;
+}
+.dataItem .film {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    .name__film {
+        color: orange;
+        font-size: $fs-2;
+        font-weight: $fw-2;
+    }
+    .time {
+        color: #949494;
+        font-size: $fs-1;
+    }
+}
+#clearBtn {
+    cursor: pointer;
+}
+@include reponsiveMax("small") {
+    .search {
+        padding-top: 35px;
+    }
+    .searchIcon {
+        padding: 13px 15px 13px;
+    }
+    .searchIcon svg {
+        font-size: 25px;
+    }
+    .dataResult {
+        width: 91.5%;
+    }
+    .dataItem .hinhAnh img {
+        width: 65px;
+        height: 65px;
+    }
+    .dataItem .film {
+        .name__film {
+            font-size: $fs-1;
+        }
+        .time {
+            font-size: 10px;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: 'Roboto', sans-serif !important;
+    font-size: 16px !important;
+    line-height: 1.6;
+    font-weight: 400;
+    @include reponsiveMax("small"){
+        font-size: 13px !important;
+    }
+}

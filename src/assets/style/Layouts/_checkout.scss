@@ -1,0 +1,377 @@
+.checkout {
+    hr {
+        margin: 10px 0;
+    }
+
+    .checkout__content {
+        height: 100%;
+
+        .checkout__reservations {
+            overflow-x: hidden;
+
+            .backToHome {
+                position: absolute;
+                top: 100px;
+                left: 20px;
+                font-size: 20px;
+                z-index: 99;
+
+                &:hover {
+                    color: $color-orange;
+                }
+            }
+
+            .checkout__top {
+                .checkout__theater {
+                    display: flex;
+                    justify-content: center;
+
+                    .theater--name {
+                        font-weight: bold;
+                        color: $color-black;
+                        margin-bottom: 0;
+                    }
+                    .theater--date {
+                        color: $color-gray-2;
+                        margin-bottom: 0;
+                    }
+                }
+                .checkout__countdown {
+                    text-align: center;
+                    p {
+                        margin: 0;
+                        color: $color-gray-2;
+                    }
+                    h2 {
+                        color: $color-red;
+                        margin: 0;
+                    }
+                }
+            }
+            .checkout__seat {
+                text-align: center;
+                .ghe {
+                    color: $color-seats;
+                    margin: $mg-1;
+                    font-size: $fs-3;
+                    line-height: 20px;
+                }
+                .gheVip {
+                    color: $color-orange-dark !important;
+                }
+                .gheDaDat {
+                    color: $color-gray-3 !important;
+                    cursor: no-drop;
+                }
+                .gheDangChon {
+                    color: $color-green !important;
+                }
+                .gheNguoiKhacDat {
+                    color: $color-red !important;
+                    cursor: no-drop;
+                }
+                .seat--col {
+                    text-align: right;
+                    button {
+                        width: 20px;
+                        font-size: $fs-3;
+                        line-height: 20px;
+                        margin: $mg-1;
+                        font-weight: bolder;
+                    }
+                }
+                .seat--note {
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                }
+            }
+        }
+
+        .checkout__bills {
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: $color-white;
+            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
+            .checkout__money {
+                h2 {
+                    color: $color-green;
+                    font-weight: bold;
+                }
+            }
+            .checkout__info {
+                color: $color-gray-2;
+                font-size: $fs-2;
+                .info--name {
+                    font-weight: bold;
+                    color: $color-black;
+                    font-size: $fs-3;
+                }
+                p {
+                    margin-bottom: $mg-1;
+                    line-height: 20px;
+                }
+            }
+            .checkout__selected {
+                .seat {
+                    color: $color-red;
+                }
+                .money {
+                    color: $color-green;
+                    font-weight: bold;
+                    text-align: center;
+                }
+            }
+            .checkout__client {
+                span {
+                    font-size: $fs-1;
+                    font-weight: $fw-2;
+                    color: $color-gray-2;
+                }
+                p {
+                    margin-bottom: $mg-1;
+                    line-height: $pd-5;
+                }
+            }
+            .checkout__bottom {
+                background-color: $color-white;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(0, 0);
+                .checkout__note {
+                    font-size: $fs-1;
+                    display: flex;
+
+                    p {
+                        margin-bottom: 0;
+                        line-height: $pd-5;
+                    }
+
+                    i {
+                        font-size: $fs-3;
+                        color: $color-red;
+                    }
+
+                    span {
+                        color: $color-orange-dark;
+                    }
+                }
+                .checkout__btn {
+                    width: 100%;
+                    text-align: center;
+                    line-height: 60px;
+                    background-color: $color-green;
+                    color: $color-white;
+                    font-size: 20px;
+                    font-weight: $fw-3;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.ant-tabs-top {
+    .ant-tabs-nav {
+        height: 80px;
+        margin: 0 !important;
+        box-shadow: 0 1px 6px -2px $color-gray-1;
+
+        .ant-tabs-nav-list {
+            margin-left: 10%;
+
+            .ant-tabs-tab {
+                font-size: $fs-3;
+
+                &:hover {
+                    color: $color-red;
+                }
+            }
+            .ant-tabs-tab-active .ant-tabs-tab-btn,
+            .ant-tabs-tab-btn:focus {
+                color: $color-red;
+            }
+
+            .ant-tabs-ink-bar {
+                background-color: $color-red;
+            }
+        }
+    }
+}
+
+.user--acc {
+    display: flex;
+    align-items: center;
+
+    span {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background: $color-gray-3;
+        line-height: 35px;
+        display: flex;
+        justify-content: center;
+        font-size: 25px;
+        text-transform: uppercase;
+        color: $color-white;
+    }
+    .user--name {
+        color: $color-gray-2;
+        font-weight: bold;
+    }
+}
+
+// kết quả đặt vé
+.checkout__result {
+    height: 100vh;
+    background: linear-gradient(0deg, #0a2029, transparent);
+    .back,
+    .continue {
+        font-size: $fs-2;
+
+        a {
+            color: $color-black;
+        }
+
+        button {
+            transition: all 0.5s;
+
+            &:hover {
+                color: $color-orange-light;
+            }
+        }
+
+        i {
+            margin: 0 10px;
+        }
+    }
+    .film {
+        width: 345px;
+        height: 545px;
+        border-radius: 5px;
+        background-color: $color-white;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+        .logo-rap {
+            display: flex;
+            align-items: center;
+            margin: $mg-1;
+
+            p {
+                margin-bottom: 0;
+                padding-left: $pd-2;
+            }
+        }
+        .film-img {
+            padding: 0 10px;
+        }
+    }
+}
+
+// responsive
+@include between-sizes("947px", "1048px") {
+    .checkout {
+        .checkout__content {
+            .checkout__reservations {
+                .checkout__screen {
+                    img {
+                        width: 80%;
+                    }
+                }
+                .checkout__seat {
+                    .seat--col {
+                        button {
+                            margin: 8px;
+                        }
+                    }
+                    .seat--row {
+                        .ghe {
+                            margin: 8px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include between-sizes("896px", "946px") {
+    .checkout {
+        .checkout__content {
+            .checkout__reservations {
+                .checkout__screen {
+                    img {
+                        width: 80%;
+                    }
+                }
+                .checkout__seat {
+                    .seat--col {
+                        button {
+                            margin: 7px;
+                        }
+                    }
+                    .seat--row {
+                        .ghe {
+                            margin: 7px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include between-sizes("792px", "895px") {
+    .checkout {
+        .checkout__content {
+            .checkout__reservations {
+                .checkout__screen {
+                    img {
+                        width: 80%;
+                    }
+                }
+                .checkout__seat {
+                    .seat--col {
+                        button {
+                            margin: 5px;
+                        }
+                    }
+                    .seat--row {
+                        .ghe {
+                            margin: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include reponsiveMax("mid") {
+    .checkout {
+        .checkout__content {
+            .checkout__reservations {
+                .checkout__screen {
+                    img {
+                        width: 80%;
+                    }
+                }
+                .checkout__seat {
+                    .seat--col {
+                        button {
+                            margin: 5px;
+                        }
+                    }
+                    .seat--row {
+                        .ghe {
+                            margin: 5px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
