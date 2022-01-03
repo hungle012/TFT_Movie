@@ -2,7 +2,7 @@
   "name": "movie_project",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://hungle.github.io/TFT_Movie/",
+  "homepage": "https://hungle012.github.io/TFT_Movie/",
   "dependencies": {
     "@ant-design/icons": "^4.7.0",
     "@emotion/react": "^11.6.0",
